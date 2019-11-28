@@ -1,0 +1,10 @@
+{% extends 'register/base.htm' %}
+{% load static %}
+{% block content %}
+<p>Welcome {{ user.username }}, This is the profile page</p>
+<p>Your Email is {{ user.email }}</p>
+
+<a href="{% url 'index' %}">Homepage</a>
+<br>
+<a href=" {% url 'logout' %}">Log Out</a>
+{% endblock %}

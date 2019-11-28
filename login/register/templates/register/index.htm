@@ -1,0 +1,14 @@
+{% extends 'register/base.htm' %}
+{% load static %}
+{% block content %}
+<h1>This is a demonstration API to SignUp, LogIn and Authenticate users</h1>
+
+{% if user.is_authenticated %}
+<h3>Click the button below to Log Out and continue</h3>
+<a href="{% url 'logout' %}">Log Out</a>
+{% else %}
+<h3>Click the button below to signup and continue</h3>
+<a href="{% url 'signup' %}">Sign up</a>
+<p>Already have an account? <a href=" {% url 'login' %}">Log In</a></p>
+{% endif %}
+{% endblock %}
